@@ -1,18 +1,12 @@
 #include <jni.h>
 #include <string>
 
-extern "C" JNIEXPORT jstring JNICALL
-Java_com_example_samplenative_MainActivity_stringFromJNI(
-        JNIEnv* env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++ : )";
-    return env->NewStringUTF(hello.c_str());
-}
 
 extern "C"
 JNIEXPORT jfloatArray JNICALL
-Java_com_example_samplenative_MainActivity_floatFromJNI(JNIEnv *env, jobject thiz,
-                                                        jfloatArray arr) {
+Java_com_example_getdoubledarray_FloatArrayLib_00024Companion_floatFromJNI(JNIEnv *env,
+                                                                           jobject thiz,
+                                                                           jfloatArray arr) {
     // TODO: implement floatFromJNI()
     jsize len = (*env).GetArrayLength(arr);
     jfloat  *temp = (*env).GetFloatArrayElements(arr,0);
