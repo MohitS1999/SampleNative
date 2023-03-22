@@ -14,6 +14,7 @@ class FloatArrayLib {
         }
         fun simpleNativeLib( context: Context,floatArr: FloatArray) : FloatArray{
             Log.d(TAG, "simpleNativeLib: ")
+
             return floatFromJNI(floatArr)
         }
 
