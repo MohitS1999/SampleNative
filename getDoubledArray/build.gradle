@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         ndk {
-            abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
 
 
@@ -30,6 +30,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
     }
 }
 
